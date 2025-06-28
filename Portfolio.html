@@ -4,43 +4,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profoilo</title>
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: #ecf0f1;
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        img.profile-pic {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        #about, #skills, #contact {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body bgcolor="#ecf0f1" link="blue" alink="red" vlink="green">
-    <!-- Header Section -->
+<body>
     <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <h1>I'm <em>ZhirDev</em></h1>
-        <p> <b>Front-End Developer</b> </p>
-        <img src="profia.jpg" height="250px" width="200px">
+        <p><b>Front-End Developer</b></p>
+        <img src="profia.jpg" alt="ZhirDev profile picture" height="250px" width="200px" class="profile-pic">
     </header>
-    <!-- Introduction Section -->
-    <section>
-        <h2>About Me</h2>
-        <p>Front-End Developer from Sulaimani. 
-            I love working with code and bringing designs 
-            to life through development. Currently</p>
-    </section>
-    <!-- Skills Section -->
-     <br>
-     <section>
-        <hr>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Tailwindcss</li>
-        </ul>
-     </section>
-     <!-- Contact Section -->
-    <br>
-      <section>
-        <h2>Contact Me</h2>
-        <p> Email: <a href="https://mail.google.com/">zhir.232402@univsul.edu.iq</a></p>
+
+    <div class="container">
+        <article id="about">
+            <h2>About Me</h2>
+            <p>Front-End Developer from Sulaimani. I love working with code and bringing designs to life through development. I am passionate about creating intuitive and dynamic user experiences. I am constantly learning new technologies and improving my skills to deliver high-quality web applications.</p>
+        </article>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Tailwind CSS</li>
+                <li>Responsive Web Design</li>
+                <li>Git & GitHub</li>
+            </ul>
         </section>
-        <!-- Footer Section -->
-        <footer>
-            <p> &copy; 2024 ZhirDev</p>
-        </footer>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:zhir.232402@univsul.edu.iq">zhir.232402@univsul.edu.iq</a></p>
+            <p>You can also find me on <a href="https://github.com/" target="_blank">GitHub</a> (Link to your profile) or <a href="https://linkedin.com/" target="_blank">LinkedIn</a> (Link to your profile).</p>
+
+            <h3>Send me a message:</h3>
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 98%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;">
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required style="width: 98%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;">
+                </div>
+                <div>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" required style="width: 98%; padding: 8px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+                </div>
+                <div>
+                    <button type="submit" style="background-color: #3498db; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ZhirDev</p>
+    </footer>
 </body>
 </html>
